@@ -8,9 +8,11 @@ include "koneksi.php";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinasi Nusantara</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
     <link rel="shortcut icon" href="https://png.pngtree.com/png-clipart/20241101/original/pngtree-beach-logo-design-sunset-palm-trees-by-the-vector-illustration-png-image_16577597.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"rel="stylesheet"/>
 </head>
 <body class="bg-light text-dark" id="pageBody">
 
@@ -340,9 +342,9 @@ include "koneksi.php";
 </footer>
 <!-- footer akhir -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-POCVhZKH0UOfCvzF6YtXGsIBLBC6jOF4ufGmyD0g38U38zVczO9X1Mhywi3zyzI8" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-YX8/O34WZ12k6kP8Aav/oc27NUbx1gAtI5u3GQOGNlfAmR91mbCujR+ygQ9g8F5E" crossorigin="anonymous"></script>
-    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-POCVhZKH0UOfCvzF6YtXGsIBLBC6jOF4ufGmyD0g38U38zVczO9X1Mhywi3zyzI8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-YX8/O34WZ12k6kP8Aav/oc27NUbx1gAtI5u3GQOGNlfAmR91mbCujR+ygQ9g8F5E" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
    <script>
     const darkThemeBtn = document.getElementById('darkTheme');
