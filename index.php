@@ -155,37 +155,36 @@ include "koneksi.php";
         <br>
         <h1 class="fw-bold display-4 pb-3">Gallery</h1>
         <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner d-flex justify-content-center"> 
-                <div class="carousel-item active w-75 mx-auto"> 
-                    <div class="ratio ratio-16x9">
-                        <iframe
-                            src="https://www.youtube.com/embed/IWp650nCk-w"
-                            title="YouTube video player"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
+        <div class="carousel-inner">
+                    <?php
+                    $sql = "SELECT * FROM gallery ORDER BY tanggal DESC";
+                    $hasil = $conn->query($sql);
+
+                    $activeClass = "active";
+                    while ($row = $hasil->fetch_assoc()) {
+                        ?>
+                        <div class="carousel-item <?= $activeClass ?>">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="img/<?= $row["gambar"] ?>" class="card-img-top" alt="Gallery Image" />
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        $activeClass = "";
+                    }
+                    ?>
                 </div>
-            </div>
-            <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExample"
-                data-bs-slide="prev"
-            >
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExample"
-                data-bs-slide="next"
-            >
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
         </div>
     </div>
     <br>

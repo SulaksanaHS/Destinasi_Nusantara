@@ -55,8 +55,15 @@ if (!isset($_SESSION['username'])) {
     <nav class="navbar navbar-expand-sm sticky-top" style="background-color: #a0a5ab;">
     <div class="container">
         <a class="navbar-brand" href=".">Destinasi Nusantara</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+        
+        <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-dark">
@@ -66,11 +73,18 @@ if (!isset($_SESSION['username'])) {
             <li class="nav-item">
               <a class="nav-link" href="admin.php?page=article">Article</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin.php?page=gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark fw-bold" href="index.php">HomePage</a>
+            </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-dark fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <?= $_SESSION['username']?>
                   </a>
                   <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="admin.php?page=profile">Profile <?=$_SESSION['username']?> </a></li>
                     <li><a class="dropdown-item" href="logout.php">Logout</a></li> 
                 </ul>
                 </li>

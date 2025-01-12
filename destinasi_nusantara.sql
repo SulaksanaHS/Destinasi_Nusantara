@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Des 2024 pada 22.01
+-- Waktu pembuatan: 12 Jan 2025 pada 03.42
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -41,7 +41,7 @@ CREATE TABLE `article` (
 --
 
 INSERT INTO `article` (`id`, `judul`, `isi`, `gambar`, `tanggal`, `username`) VALUES
-(1, 'Pantai Kuta', 'Pantai populer di Bali yang terkenal dengan keindahan matahari terbenam dan ombak yang cocok untuk berselancar.', 'pantai_kuta.jpg', '2024-12-22 10:00:00', 'admin'),
+(1, 'Pantai Kuta', 'Pantai yang terkenal di Bali dengan ombak yang cocok untuk berselancar.', 'pantai_kuta.jpg', '2025-01-11 04:26:22', 'admin'),
 (2, 'Taman Nasional Komodo', 'Rumah bagi komodo, kadal terbesar di dunia, terletak di Nusa Tenggara Timur.', 'komodo.jpg', '2024-12-22 10:10:00', 'admin'),
 (3, 'Kawah Ijen', 'Gunung dengan kawah biru yang memukau dan api biru alami di Banyuwangi, Jawa Timur.', 'kawah_ijen.jpg', '2024-12-22 10:20:00', 'admin'),
 (4, 'Raja Ampat', 'Surga tersembunyi di Papua Barat dengan keindahan bawah laut yang luar biasa.', 'raja_ampat1.jpg', '2024-12-22 10:30:00', 'admin'),
@@ -54,20 +54,26 @@ INSERT INTO `article` (`id`, `judul`, `isi`, `gambar`, `tanggal`, `username`) VA
 --
 
 CREATE TABLE `gallery` (
-  `id_gallery` int(11) NOT NULL,
-  `nama_gallery` varchar(255) NOT NULL,
-  `deskripsi` text DEFAULT NULL,
-  `tanggal` date NOT NULL
+  `id` int(11) NOT NULL,
+  `tanggal` datetime DEFAULT NULL,
+  `username` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+  `gambar` text CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `gallery`
 --
 
-INSERT INTO `gallery` (`id_gallery`, `nama_gallery`, `deskripsi`, `tanggal`) VALUES
-(1, 'Pantai Kuta', 'Pantai indah di Bali dengan pasir putih', '2024-12-01'),
-(2, 'Candi Borobudur', 'Candi Budha terbesar di dunia', '2024-12-02'),
-(3, 'Gunung Bromo', 'Gunung terkenal dengan pemandangan matahari terbit', '2024-12-03');
+INSERT INTO `gallery` (`id`, `tanggal`, `username`, `gambar`) VALUES
+(1, '2024-12-07 10:00:00', 'admin', 'tambi.jpeg'),
+(2, '2024-12-07 10:05:00', 'sulaksana', 'sumba2.jpg'),
+(3, '2024-12-07 10:10:00', 'admin', 'sikidang.jpg'),
+(4, '2024-12-07 10:15:00', 'sulaksana', 'sikunir.png'),
+(5, '2024-12-07 10:20:00', 'sulaksana', 'sumba3.jpg'),
+(6, '2024-12-07 10:25:00', 'admin', 'sumba1.jpg'),
+(7, '2024-12-07 10:30:00', 'admin', 'ratapan.png'),
+(8, '2024-12-07 10:35:00', 'sulaksana', 'gedungsongo.jpg'),
+(9, '2024-12-07 10:40:00', 'admin', 'pinus.jpg');
 
 -- --------------------------------------------------------
 
@@ -87,7 +93,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `foto`) VALUES
-(1, 'admin', '25d55ad283aa400af464c76d713c07ad', '');
+(1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '1736542565_jepri.jpg'),
+(2, 'sulaksana', 'e41fe7252f5909f9621bb8a31c008575', '1736581498_WhatsApp Image 2025-01-03 at 20.52.11 (1).jpeg');
 
 --
 -- Indexes for dumped tables
@@ -103,7 +110,7 @@ ALTER TABLE `article`
 -- Indeks untuk tabel `gallery`
 --
 ALTER TABLE `gallery`
-  ADD PRIMARY KEY (`id_gallery`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `user`
@@ -119,19 +126,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `article`
 --
 ALTER TABLE `article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
